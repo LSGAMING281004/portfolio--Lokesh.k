@@ -3,72 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lokesh K - Portfolio</title>
+    <title>Lokesh K | Java Full Stack Developer Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1 style="color: azure;">Lokesh K</h1>
-            <p>Software Developer</p>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>LOKESH K</h1>
+        <h2>Java Full-Stack Developer</h2>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
-    
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>Passionate and self-motivated software developer with hands-on experience in Android development using Java. Skilled in working with Android Studio, Firebase and FireBase. Currently expanding expertise in Flutter.</p>
+
+    <section id="about">
+        <h3>About</h3>
+        <p>Practical Java full-stack developer with a strong foundation in Core Java and Spring Boot. Specializes in building maintainable backend systems, integrating with MySQL, and modernizing legacy Java UIs. Known for fast troubleshooting skills and delivering polished demos and solutions.</p>
+    </section>
+
+    <section id="skills">
+        <h3>Technical Skills</h3>
+        <ul>
+            <li><strong>Languages:</strong> Java, JavaScript (basic), SQL, HTML, CSS</li>
+            <li><strong>Backend:</strong> Core Java, Spring Boot, REST API</li>
+            <li><strong>Frontend:</strong> HTML, CSS, Bootstrap</li>
+            <li><strong>Database:</strong> MySQL, Firebase (Realtime, Firestore)</li>
+            <li><strong>Tools:</strong> Git, GitHub, Postman, IntelliJ IDEA, VS Code, Maven, Tomcat, GitHub Actions (CICD basics)</li>
+            <li><strong>Concepts:</strong> OOP, multithreading, JDBC</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h3>Projects</h3>
+        <div class="project">
+            <h4>StudentInfo Basic CRUD Operation</h4>
+            <p>Full-stack CRUD application using Spring Boot REST backend, MySQL database, and React-based frontend. Clean separation of concerns and RESTful design principles applied.</p>
+        </div>
+        <div class="project">
+            <h4>Jarvis Personal AI Assistant</h4>
+            <p>Android-based assistant in Java, supporting voice commands and communication functions, using Firebase ML Kit for speech and intent processing. Modular code and API integration.</p>
         </div>
     </section>
-    
-    <section id="skills" class="section">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <span>Java</span>
-                <span>C++</span>
-                <span>Dart (Basics)</span>
-                <span>Android Studio</span>
-                <span>Firebase</span>
-            </div>
-        </div>
+
+    <section id="education">
+        <h3>Education</h3>
+        <ul>
+            <li>Java Full Stack Development, SLA, Chennai (2025 - Present)</li>
+            <li>Bachelor of Computer Applications, Indo American College, Tiruvannamalai (2022 - 2025)</li>
+        </ul>
     </section>
-    
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project-card">
-                <h3>Jarvis AI</h3>
-                <p>Developed an Android application using Java.</p>
-                <a href="https://github.com/LSGAMING281004" target="_blank">View on GitHub</a>
-            </div>
-        </div>
+
+    <section id="contact">
+        <h3>Contact & Links</h3>
+        <ul>
+            <li>Email: <a href="mailto:lsgaming342@gmail.com">lsgaming342@gmail.com</a></li>
+            <li>GitHub: <a href="https://github.com/LSGAMING281004" target="_blank">LSGAMING281004</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/lingsterlokesh" target="_blank">lingsterlokesh</a></li>
+            <li>HackerRank: <a href="https://www.hackerrank.com/lsgaming342" target="_blank">lsgaming342</a></li>
+            <li>LeetCode: <a href="https://leetcode.com/Lokeshkls" target="_blank">Lokeshkls</a></li>
+            <li>Phone: <a href="tel:917200750342">91 7200750342</a></li>
+        </ul>
     </section>
-    
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:lsgaming342@gmail.com">lsgaming342@gmail.com</a></p>
-            <p>Phone: +91 7200750342</p>
-            <p>LinkedIn: <a href="https://in.linkedin.com/in/lokesh-k-4886972a4" target="_blank">lokesh-k-4886972a4</a></p>
-        </div>
-    </section>
-    
+
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Lokesh K. All rights reserved.</p>
-        </div>
+        <p>&copy; 2025 Lokesh K | Java Full Stack Developer</p>
+        <button id="back-to-top">Back to Top</button>
     </footer>
+    <script>
+        document.getElementById('back-to-top').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+    </script>
 </body>
 </html>
