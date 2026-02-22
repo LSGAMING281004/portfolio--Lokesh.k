@@ -4,78 +4,334 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lokesh K | Java Full Stack Developer Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>LOKESH K</h1>
-        <h2>Java Full-Stack Developer</h2>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-text">LK</span>
+            </div>
+            <button class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="theme-selector">
+                <button class="theme-btn" id="theme-btn" title="Change Theme">
+                    <i class="fas fa-palette"></i> Themes
+                </button>
+                <div class="theme-menu" id="theme-menu">
+                    <button class="theme-option" data-theme="dark"><i class="fas fa-moon"></i> Dark</button>
+                    <button class="theme-option" data-theme="light"><i class="fas fa-sun"></i> Light</button>
+                    <button class="theme-option" data-theme="sun"><i class="fas fa-fire"></i> Sun</button>
+                    <button class="theme-option" data-theme="winter"><i class="fas fa-snowflake"></i> Winter</button>
+                    <button class="theme-option" data-theme="rain"><i class="fas fa-cloud-rain"></i> Rain</button>
+                    <button class="theme-option" data-theme="neon"><i class="fas fa-sparkles"></i> Neon</button>
+                </div>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">LOKESH K</h1>
+            <p class="hero-subtitle">Java Full-Stack Developer</p>
+            <p class="hero-desc">Building robust, scalable backend systems and modern web applications</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
     </header>
 
-    <section id="about">
-        <h3>About</h3>
-        <p>Practical Java full-stack developer with a strong foundation in Core Java and Spring Boot. Specializes in building maintainable backend systems, integrating with MySQL, and modernizing legacy Java UIs. Known for fast troubleshooting skills and delivering polished demos and solutions.</p>
-    </section>
-
-    <section id="skills">
-        <h3>Technical Skills</h3>
-        <ul>
-            <li><strong>Languages:</strong> Java, JavaScript (basic), SQL, HTML, CSS</li>
-            <li><strong>Backend:</strong> Core Java, Spring Boot, REST API</li>
-            <li><strong>Frontend:</strong> HTML, CSS, Bootstrap</li>
-            <li><strong>Database:</strong> MySQL, Firebase (Realtime, Firestore)</li>
-            <li><strong>Tools:</strong> Git, GitHub, Postman, IntelliJ IDEA, VS Code, Maven, Tomcat, GitHub Actions (CICD basics)</li>
-            <li><strong>Concepts:</strong> OOP, multithreading, JDBC</li>
-        </ul>
-    </section>
-
-    <section id="projects">
-        <h3>Projects</h3>
-        <div class="project">
-            <h4>StudentInfo Basic CRUD Operation</h4>
-            <p>Full-stack CRUD application using Spring Boot REST backend, MySQL database, and React-based frontend. Clean separation of concerns and RESTful design principles applied.</p>
-        </div>
-        <div class="project">
-            <h4>Jarvis Personal AI Assistant</h4>
-            <p>Android-based assistant in Java, supporting voice commands and communication functions, using Firebase ML Kit for speech and intent processing. Modular code and API integration.</p>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-wrapper">
+                <div class="about-photo-container">
+                    <div class="glass-frame">
+                        <img src="135082681.png" alt="Lokesh K" class="about-photo">
+                        <div class="glass-shine"></div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <p class="about-text">
+                        I'm a passionate Java Full-Stack Developer with a comprehensive understanding of modern software development practices and emerging technologies. With hands-on experience in building scalable backend systems and intuitive frontend interfaces, I combine technical expertise with a strong commitment to continuous learning in the IT industry.
+                    </p>
+                    <p class="about-text">
+                        My skill set spans across Core Java, Spring Boot, RESTful APIs, and cloud technologies. I'm particularly interested in leveraging Artificial Intelligence and Machine Learning to create intelligent solutions. I stay updated with industry trends and best practices, constantly seeking opportunities to expand my knowledge and contribute to innovative projects that push the boundaries of technology.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="education">
-        <h3>Education</h3>
-        <ul>
-            <li>Java Full Stack Development, SLA, Chennai (2025 - Present)</li>
-            <li>Bachelor of Computer Applications, Indo American College, Tiruvannamalai (2022 - 2025)</li>
-        </ul>
+    <!-- Skills Section -->
+    <section id="skills" class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4><i class="fas fa-code"></i> Languages</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4><i class="fas fa-server"></i> Backend</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">REST API</span>
+                        <span class="skill-tag">Authentication</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4><i class="fas fa-mobile-alt"></i> Frontend</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">Bootstrap</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4><i class="fas fa-database"></i> Database</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Firebase</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4><i class="fas fa-tools"></i> Tools & Platforms</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">VS Code</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4><i class="fas fa-brain"></i> Specialties</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">RESTful APIs</span>
+                        <span class="skill-tag">Authentication Systems</span>
+                        <span class="skill-tag">Database Design</span>
+                        <span class="skill-tag">Performance Optimization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-        <h3>Contact & Links</h3>
-        <ul>
-            <li>Email: <a href="mailto:lsgaming342@gmail.com">lsgaming342@gmail.com</a></li>
-            <li>GitHub: <a href="https://github.com/LSGAMING281004" target="_blank">LSGAMING281004</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/lingsterlokesh" target="_blank">lingsterlokesh</a></li>
-            <li>HackerRank: <a href="https://www.hackerrank.com/lsgaming342" target="_blank">lsgaming342</a></li>
-            <li>LeetCode: <a href="https://leetcode.com/Lokeshkls" target="_blank">Lokeshkls</a></li>
-            <li>Phone: <a href="tel:917200750342">91 7200750342</a></li>
-        </ul>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-shopping-bag"></i>
+                        <h3>ShoppinGo – Store Discovery Platform</h3>
+                    </div>
+                    <p class="project-description">A full-stack store discovery platform serving multi-role users (public, store owners) with comprehensive store management and review system.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">REST API</span>
+                    </div>
+                    <p class="project-details">
+                        <strong>Highlights:</strong> Built 15+ RESTful APIs for store discovery, management, and authentication. Implemented secure authentication and role-based authorization. Optimized database queries improving response time by ~30%. Designed scalable relational schema for store and review management.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://shoppingo-acb4f.web.app/" class="project-btn" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>
+                        <a href="https://github.com/LSGAMING281004/ShoppinGo" class="project-btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-sticky-note"></i>
+                        <h3>Notemee – Secure Note Management</h3>
+                    </div>
+                    <p class="project-description">A responsive note-taking web application that enables users to save and manage daily thoughts securely with Google authentication.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Google Auth</span>
+                        <span class="tech-tag">Responsive Design</span>
+                    </div>
+                    <p class="project-details">
+                        <strong>Highlights:</strong> Implemented Google Authentication for secure user login. Improved UI responsiveness and load performance through optimized state handling. Designed minimal and user-centric interface improving overall usability and user engagement.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://account-create-2c8fb.web.app" class="project-btn" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>
+                        <a href="https://github.com/LSGAMING281004/Notemee" class="project-btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-robot"></i>
+                        <h3>Jarvis – Android AI Assistant</h3>
+                    </div>
+                    <p class="project-description">An intelligent Android-based voice assistant built for the final year project with speech recognition and intent processing capabilities.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Android</span>
+                        <span class="tech-tag">Firebase ML Kit</span>
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Voice Recognition</span>
+                    </div>
+                    <p class="project-details">
+                        <strong>Highlights:</strong> Integrated speech recognition and intent processing modules. Automated calling and SMS workflows via voice commands. Designed modular architecture improving maintainability and scalability of the application.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/LSGAMING281004/Jarvis" class="project-btn" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>
+                        <a href="https://github.com/LSGAMING281004/Jarvis" class="project-btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Lokesh K | Java Full Stack Developer</p>
-        <button id="back-to-top">Back to Top</button>
+    <!-- Education Section -->
+    <section id="education" class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-timeline">
+                <div class="education-item">
+                    <div class="education-marker"></div>
+                    <div class="education-content">
+                        <h3>Bachelor of Computer Applications (BCA)</h3>
+                        <p class="education-org">Indo American College, Cheyyar</p>
+                        <p class="education-period">2022 - 2025</p>
+                        <p class="education-desc">Comprehensive study of computer science fundamentals, programming, database management, software development, and IT concepts. <strong>Percentage: 72%</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-list">
+                <div class="certification-item">
+                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="cert-content">
+                        <h4>Java Full Stack Certification</h4>
+                        <p class="cert-issuer">SLA Institute</p>
+                        <p class="cert-year">2025</p>
+                    </div>
+                </div>
+                <div class="certification-item">
+                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="cert-content">
+                        <h4>IBM JavaScript Certification</h4>
+                        <p class="cert-issuer">IBM Etrain</p>
+                        <p class="cert-year">2025</p>
+                    </div>
+                </div>
+                <div class="certification-item">
+                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="cert-content">
+                        <h4>Java (Basic) Certification</h4>
+                        <p class="cert-issuer">HackerRank</p>
+                        <p class="cert-year">2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-intro">I'm always interested in hearing about new projects and opportunities. Feel free to reach out!</p>
+            
+            <div class="contact-grid">
+                <a href="mailto:lsgaming342@gmail.com" class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <p>lsgaming342@gmail.com</p>
+                </a>
+
+                <a href="tel:917200750342" class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h4>Phone</h4>
+                    <p>+91 7200750342</p>
+                </a>
+
+                <a href="https://github.com/LSGAMING281004" target="_blank" class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <h4>GitHub</h4>
+                    <p>LSGAMING281004</p>
+                </a>
+
+                <a href="https://www.linkedin.com/in/lingsterlokesh" target="_blank" class="contact-card">
+                    <i class="fab fa-linkedin"></i>
+                    <h4>LinkedIn</h4>
+                    <p>lingsterlokesh</p>
+                </a>
+
+                <a href="https://www.hackerrank.com/lsgaming342" target="_blank" class="contact-card">
+                    <i class="fab fa-hackerrank"></i>
+                    <h4>HackerRank</h4>
+                    <p>lsgaming342</p>
+                </a>
+
+                <a href="https://leetcode.com/u/Lokesh_k_ls/" target="_blank" class="contact-card">
+                    <i class="fas fa-code"></i>
+                    <h4>LeetCode</h4>
+                    <p>Lokesh_k_ls</p>
+                </a>
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/LSGAMING281004" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/lingsterlokesh" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.hackerrank.com/lsgaming342" target="_blank" title="HackerRank"><i class="fab fa-hackerrank"></i></a>
+                <a href="https://leetcode.com/u/Lokesh_k_ls/" target="_blank" title="LeetCode"><i class="fas fa-code"></i></a>
+                <a href="mailto:lsgaming342@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Lokesh K | Java Full Stack Developer. All rights reserved.</p>
+            <button id="back-to-top" class="back-to-top" title="Back to top">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
     </footer>
-    <script>
-        document.getElementById('back-to-top').addEventListener('click', function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-    </script>
+
+    <script src="script.js"></script>
 </body>
 </html>
