@@ -1,0 +1,96 @@
+/* Custom Cursor: Bright Bubble Arrow */
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
+
+  .custom-cursor {
+    --angle: 0deg;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%) rotate(var(--angle));
+    transition: transform 160ms cubic-bezier(.2,.9,.2,1), width 180ms ease, height 180ms ease, opacity 200ms ease;
+    background-color: transparent;
+  }
+
+  .custom-cursor .cursor-halo {
+    position: absolute;
+    width: 160%;
+    height: 160%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(circle at 40% 35%, rgba(23,193,209,0.28), rgba(23,193,209,0.12) 35%, rgba(23,193,209,0.00) 60%);
+    filter: blur(18px);
+    opacity: 0.9;
+    transition: transform 220ms ease, opacity 220ms ease;
+    pointer-events: none;
+    z-index: -1;
+    mix-blend-mode: screen;
+    animation: pulse 2.6s infinite ease-in-out;
+  }
+
+  @keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(0.96); opacity: 0.85; }
+    50% { transform: translate(-50%, -50%) scale(1.05); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(0.96); opacity: 0.85; }
+  }
+
+  /* image sizing and subtle effects */
+  .custom-cursor img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    /* adjust transform-origin so the rocket/arrow tip matches pointer hotspot */
+    transform-origin: 65% 20%;
+    transition: transform 140ms cubic-bezier(.2,.9,.2,1), filter 160ms ease, opacity 160ms ease;
+    filter: drop-shadow(0 8px 20px rgba(23,193,209,0.28));
+    will-change: transform;
+    -webkit-user-drag: none;
+  }
+
+  .custom-cursor.small {
+    width: 44px;
+    height: 44px;
+    transform: translate(-50%, -50%) scale(0.9) rotate(var(--angle));
+  }
+
+  .custom-cursor.grow {
+    width: 88px;
+    height: 88px;
+    transform: translate(-50%, -50%) scale(1.1) rotate(var(--angle));
+    opacity: 0.99;
+  }
+
+  .custom-cursor.hide {
+    opacity: 0;
+  }
+
+  /* Slight enlarge on interactive elements */
+  a:hover ~ .custom-cursor,
+  button:hover ~ .custom-cursor,
+  .btn:hover ~ .custom-cursor {
+    transform: translate(-50%, -50%) scale(1.04) rotate(var(--angle));
+  }
+
+  /* hover class applied by JS for interactive elements */
+  .custom-cursor.hover img {
+    transform: rotate(6deg) scale(0.96);
+    filter: drop-shadow(0 14px 28px rgba(23,193,209,0.36));
+  }
+
+  .custom-cursor.pressed img {
+    transform: scale(0.9) rotate(6deg);
+    filter: drop-shadow(0 20px 36px rgba(23,193,209,0.44));
+  }
+}
